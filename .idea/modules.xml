@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Instagates.iml" filepath="$PROJECT_DIR$/Instagates.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Instagram.iml" filepath="$PROJECT_DIR$/Instagram.iml" />
       <module fileurl="file://$PROJECT_DIR$/ParseStarterProject/ParseStarterProject.iml" filepath="$PROJECT_DIR$/ParseStarterProject/ParseStarterProject.iml" />
     </modules>
   </component>

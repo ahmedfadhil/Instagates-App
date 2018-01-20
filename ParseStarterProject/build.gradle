@@ -1,14 +1,13 @@
+//noinspection GradleDynamicVersion
 apply plugin: 'com.android.application'
-apply plugin: 'com.parse'
 
 buildscript {
-  repositories {
-    mavenCentral()
-      maven { url 'http://maven.oa.com/nexus/content/repositories/android' }
-  }
-  dependencies {
-    classpath 'com.parse.tools:gradle:'
-  }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
 }
 
 android {
@@ -31,10 +30,13 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:22.2.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:design:22.2.1'
+    compile 'com.android.support:appcompat-v7:27.0.2'
 
-    compile 'com.parse.bolts:bolts-android:1.2.1'
-    compile 'com.parse:parse-android:1.10.1'
+
+    compile 'com.parse.bolts:bolts-android:1.4.0'
+    compile 'com.parse:parse-android:1.13.0'
 }
 
 /* Uncomment if you enable ProGuard and you want to automatically upload symbols on build.

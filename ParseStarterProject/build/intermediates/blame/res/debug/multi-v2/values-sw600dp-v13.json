@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/AhmedFadhil/Downloads/Instagates/ParseStarterProject/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/AhmedFadhil/.gradle/caches/transforms-1/files-1.1/design-22.2.1.aar/8c69421fb819c7bc0e043c32eba25e6d/res/values-sw600dp/values-sw600dp.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,13,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "289,352,416,481,532,583,675,955,1245",
+                        "endLines": "4,5,6,7,8,9,10,13,19",
+                        "endColumns": "62,63,64,50,50,91,45,55,12",
+                        "endOffsets": "347,411,476,527,578,670,716,1006,1422"
+                    },
+                    "to": {
+                        "startLines": "10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "611,674,738,803,854,905,997,1043,1099",
+                        "endLines": "10,11,12,13,14,15,16,17,21",
+                        "endColumns": "62,63,64,50,50,91,45,55,12",
+                        "endOffsets": "669,733,798,849,900,992,1038,1094,1276"
+                    }
+                },
+                {
+                    "source": "/Users/AhmedFadhil/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/792f7ebcb88c1ac6aecdf59c12691c5e/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    }
+                }
+            ]
+        }
+    ]
+}
