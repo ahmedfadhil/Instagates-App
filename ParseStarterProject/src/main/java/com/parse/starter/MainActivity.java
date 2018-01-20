@@ -8,14 +8,8 @@
  */
 package com.parse.starter;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -30,19 +24,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.parse.FindCallback;
-import com.parse.GetCallback;
 import com.parse.LogInCallback;
-import com.parse.Parse;
 import com.parse.ParseAnalytics;
 import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
-import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
-
-import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener {

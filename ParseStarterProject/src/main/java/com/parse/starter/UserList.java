@@ -2,33 +2,31 @@ package com.parse.starter;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.ParseException;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
+import com.parse.ParseFile;
+import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.app.Activity.RESULT_OK;
 
 public class UserList extends AppCompatActivity {
 
@@ -49,7 +47,10 @@ public class UserList extends AppCompatActivity {
 
         userList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Intent intent = new Intent(getApplicationContext(), UserFeed.class);
+                intent.putExtra("username", usernames.get(position));
+                startActivity(intent);
 
             }
         });
@@ -137,19 +138,16 @@ public class UserList extends AppCompatActivity {
                 ParseObject object = new ParseObject("images");
                 object.put("username", ParseUser.getCurrentUser().getUsername());
                 object.put("images", file);
-                object.saveInBackground(new SaveCallback()) {
+                object.saveInBackground(new SaveCallback() {
                     @Override
-                    public void done (ParseException e){
+                    public void done(ParseException e) {
                         if (e == null) {
                             Toast.makeText(getApplication().getBaseContext(), "Your image has beed posted!", Toast.LENGTH_LONG).show();
 
                         } else {
                             Toast.makeText(getApplication().getBaseContext(), "There was an error - Please try again later.", Toast.LENGTH_LONG).show();
                         }
-
                     }
-
-
                 });
 
 

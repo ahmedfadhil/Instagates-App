@@ -14,14 +14,14 @@
                     }
                 },
                 {
-                    "source": "/Users/AhmedFadhil/.gradle/caches/transforms-1/files-1.1/design-22.2.1.aar/8c69421fb819c7bc0e043c32eba25e6d/res/values-land/values-land.xml",
+                    "source": "/Users/AhmedFadhil/.gradle/caches/transforms-1/files-1.1/design-27.0.2.aar/33cd1c67b499caf9cfd9814f6aa178c7/res/values-land/values-land.xml",
                     "from": {
-                        "startLines": "4",
+                        "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "286",
-                        "endLines": "7",
+                        "startOffsets": "55",
+                        "endLines": "5",
                         "endColumns": "12",
-                        "endOffsets": "463"
+                        "endOffsets": "232"
                     },
                     "to": {
                         "startLines": "6",
