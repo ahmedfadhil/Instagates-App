@@ -16,6 +16,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
+import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
@@ -107,9 +108,11 @@ public class UserList extends AppCompatActivity {
         if (id == R.id.share) {
             Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
             startActivityForResult(intent, 1);
-
-
             return true;
+        } else if (id == R.id.logout) {
+            ParseUser.logOut();
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -138,6 +141,10 @@ public class UserList extends AppCompatActivity {
                 ParseObject object = new ParseObject("images");
                 object.put("username", ParseUser.getCurrentUser().getUsername());
                 object.put("images", file);
+
+                ParseACL parseACL = new ParseACL();
+                parseACL.setPublicReadAccess(true);
+                object.setACL(parseACL);
                 object.saveInBackground(new SaveCallback() {
                     @Override
                     public void done(ParseException e) {

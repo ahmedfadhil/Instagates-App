@@ -19,12 +19,12 @@
     android:id="@+id/relativeLayout">
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="130dp"
         android:id="@+id/logo"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
         android:layout_alignParentTop="true"
-        android:src="@drawable/instagramlogo"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/instagramlogo" />
 
     <EditText
         android:layout_width="match_parent"
